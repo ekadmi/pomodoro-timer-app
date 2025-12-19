@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Pomodoro Mobile",
+    "slug": "pomodoro-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "plugins": ["expo-notifications"],
+    "android": {
+      "useNextNotificationsApi": true,
+      "package": "com.vividdl.pomodoro"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.vividdl.pomodoro"
+    }
+  }
+}
