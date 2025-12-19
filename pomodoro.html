@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pomodoro Timer</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#7c3aed">
+  <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div class="brand">Pomodoro</div>
+      <button id="themeToggle" class="toggle">Dark</button>
+    </header>
+    <section class="center">
+      <div class="time" id="time">25:00</div>
+      <div class="label" id="modeLabel">Work</div>
+    </section>
+    <section class="controls">
+      <button id="startBtn" class="btn primary">Start</button>
+      <button id="pauseBtn" class="btn secondary">Pause</button>
+      <button id="resetBtn" class="btn ghost">Reset</button>
+    </section>
+    <section class="settings">
+      <div class="row">
+        <button id="workUp" class="chip">Work ▲</button>
+        <button id="workDown" class="chip">Work ▼</button>
+        <button id="breakUp" class="chip">Break ▲</button>
+        <button id="breakDown" class="chip">Break ▼</button>
+      </div>
+      <div class="row">
+        <button id="soundToggle" class="chip">Sound: Off</button>
+        <button id="vibToggle" class="chip">Vibration: On</button>
+        <div class="count" id="count">Sessions 0</div>
+      </div>
+    </section>
+  </main>
+  <script src="pomodoro.js"></script>
+  <script>
+    if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}
+  </script>
+</body>
+</html>
